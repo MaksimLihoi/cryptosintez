@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Floating Color Orbs</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<!-- partial -->
+
+<div class="contentContainer">
+  <div class="absolut-block animated-div">
+    <h1>Besman <span class="underlined underline-clip">сryptosintez</span></h1>
+  </div>
+
+  <div class="absolut-block second-animated-div">
+    <h1>Нюхай бэбру</h1>
+  </div>
+
+  <div class="absolut-block third-animated-div">
+    <div style="font-size: 30px; color: aliceblue">
+      <span style="color: aqua; text-transform: uppercase">Trust wallet secret</span><br/>
+      <span style="font-weight: bold">lift doctor audit equal spray where wise win jungle book glad wrap</span><br/>
+      <span style="color: brown">Сохрани и используй эту фразу для входа в кошелек Trust wallet<br/>
+      Каждый у кого будет ссылка сможет зайти по этой фразе в кошелек
+      </span>
+    </div>
+  </div>
+
+</div>
+<script>
+  const animatedDiv = document.querySelector('.animated-div');
+  const secondAnimatedDiv = document.querySelector('.second-animated-div');
+  const thirdAnimatedDiv = document.querySelector('.third-animated-div');
+
+  animatedDiv.addEventListener('animationend', () => {
+    animatedDiv.classList.add('fade-out');
+    setTimeout(() => {
+      secondAnimatedDiv.style.display = 'block'
+    }, 3000)
+
+    secondAnimatedDiv.classList.add('fade-in');
+
+    secondAnimatedDiv.addEventListener('animationend', () => {
+      secondAnimatedDiv.classList.add('fade-out');
+
+      setTimeout(() => {
+        thirdAnimatedDiv.style.display = 'block'
+      }, 3000)
+
+      thirdAnimatedDiv.classList.add('fade-in');
+
+      thirdAnimatedDiv.style.opacity = 1
+
+    });
+  });
+</script>
+
+</body>
+</html>
